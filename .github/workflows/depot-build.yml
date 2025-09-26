@@ -24,7 +24,7 @@ jobs:
       - name: Build & push (Depot)
         uses: depot/build-push-action@v1
         with:
-          project: <YOUR-DEPOT-PROJECT-ID>
+          project: 9s8hpzzv0s
           token: ${{ secrets.DEPOT_PROJECT_TOKEN }}
           context: .
           push: true
