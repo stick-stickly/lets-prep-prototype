@@ -1,0 +1,18 @@
+{
+  "name": "lets-prep-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Minimal Node.js + Express prototype for Let's Prep onboarding (no DB).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

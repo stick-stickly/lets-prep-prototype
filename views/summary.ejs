@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Summary</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Summary</h2>
+      <div class="card">
+        <p><strong>Household:</strong> <%= totalPeople %> people (<%= userData.adults || 0 %> adults, <%= userData.children || 0 %> children)</p>
+        <p><strong>Location:</strong> <%= (userData.city || "—") %>, <%= (userData.country || "—") %></p>
+        <p><strong>Risks:</strong> 
+          <% if (userData.risks && userData.risks.length) { %>
+            <ul>
+              <% userData.risks.forEach(r => { %>
+                <li><%= r %></li>
+              <% }) %>
+            </ul>
+          <% } else { %>
+            <span>None selected</span>
+          <% } %>
+        </p>
+      </div>
+      <hr>
+      <p class="small">This is a demo prototype for testing build pipelines. No data is persisted. Refreshing the page clears your session after a while.</p>
+      <div class="button-row">
+        <a class="btn" href="/">Restart</a>
+      </div>
+    </div>
+  </body>
+</html>

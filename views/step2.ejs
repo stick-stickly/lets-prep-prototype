@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Step 2 — Location</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Step 2: Your location</h2>
+      <form method="post" action="/step2">
+        <div>
+          <label for="city">City / Town</label>
+          <input id="city" name="city" type="text" value="<%= (userData.city ?? '') %>" required>
+        </div>
+        <div>
+          <label for="country">Country</label>
+          <input id="country" name="country" type="text" value="<%= (userData.country ?? '') %>" required>
+        </div>
+        <div class="button-row">
+          <button type="submit">Continue →</button>
+          <a class="btn" href="/step1">← Back</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
